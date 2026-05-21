@@ -47,7 +47,7 @@ jobs:
         id: validate
         run: terraform validate -no-color
 
-      - uses: terraform-linters/setup-tflint@v3
+      - uses: terraform-linters/setup-tflint@v4
         with:
           tflint_version: latest
 
