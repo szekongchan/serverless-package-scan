@@ -83,7 +83,7 @@ jobs:
       status: ${{ job.status }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Setup Snyk CLI
         run: npm install -g snyk
@@ -107,7 +107,7 @@ jobs:
         run: docker build -t snyk-image:latest .
 
       - name: Run Snyk Container Test
-        run: snyk container test snyk-image:latest
+        run: snyk container test snyk-image:latest --file=Dockerfile
 
   #################################################
   # Finally, update summary for snyk-check        #

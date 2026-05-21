@@ -1,7 +1,7 @@
 FROM node:20-alpine
 WORKDIR /my-app 
 COPY package*.json ./
-RUN npm install -g npm@11.6.4
+RUN npm install -g npm@11.15.0
 RUN npm install
 COPY . .
 EXPOSE 3000
